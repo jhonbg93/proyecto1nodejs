@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.use(require('./routes/index'));
 
 //static file
-
+app.use(express.static(path.join(__dirname, 'public')))
 //listening the server
 app.listen(3000, () => {
     console.log('server on port', app.get('port'));
